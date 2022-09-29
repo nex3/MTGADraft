@@ -36,6 +36,15 @@
 				>
 					<i class="fas fa-clipboard"></i> Export Deck (Simple)
 				</button>
+				<button
+					type="button"
+					@click="downloadDeck()"
+					v-tooltip="
+						`Download ${username}'s deck and sideboard formatted for Magic Online.`
+					"
+				>
+					<img class="set-icon" src="./assets/img/mtgo-icon.png" /> Export Deck to MTGO
+				</button>
 				<template v-if="list.hashes">
 					<span
 						@click="copyHash(list.hashes.cockatrice)"

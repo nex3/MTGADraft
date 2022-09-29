@@ -1222,6 +1222,13 @@
 							>
 								<i class="fas fa-clipboard"></i> Simple
 							</button>
+							<button
+								type="button"
+								@click="downloadForMtgo()"
+								v-tooltip.top="'Download for MTGO'"
+							>
+								<img class="set-icon" src="./assets/img/mtgo-icon.png" /> MTGO
+							</button>
 						</div>
 						<button
 							v-if="deck.length > 0 && (currentDraftLog || draftLogRecipients === 'owner')"

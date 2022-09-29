@@ -2001,6 +2001,11 @@ export default {
 			);
 			fireToast("success", "Deck exported to clipboard!");
 		},
+		downloadDeck() {
+			copyToClipboard(
+				exportToMTGO(this.deck, this.sideboard, this.language, this.lands)
+			);
+		},
 		shareDecklist() {
 			this.socket.emit("shareDecklist", {
 				main: this.deck.map((c) => c.id),

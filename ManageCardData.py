@@ -343,7 +343,7 @@ if not os.path.isfile(FinalDataPath) or ForceCache or FetchSet:
         if c['id'] not in cards:
             if copyFromFaces("oracle_id") == False:
                 continue
-            cards[c['id']] = {'id': c['id'], 'oracle_id': c['oracle_id']}
+            cards[c['id']] = {'id': c['id'], 'oracle_id': c['oracle_id'], 'mtgo_id': c['mtgo_id']}
 
         key = (c['name'], c['set'], c['collector_number'])
         if key not in Translations:
